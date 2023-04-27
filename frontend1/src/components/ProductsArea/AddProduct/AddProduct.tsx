@@ -36,9 +36,9 @@ function AddProduct(): JSX.Element {
         <div className="AddProduct">
             <form onSubmit={handleSubmit(send)}>
                 <input type="text" placeholder="product name" {...register("name")}/><br></br>
-                <label htmlFor={"dateTime"}>date and time of producing: </label><br></br>
+                <label htmlFor={"dateTime"}><strong>date and time of producing:</strong> </label><br></br>
                 <input type="date" placeholder="date and time of producing" {...register("dateTime")}/><br></br>
-                <label htmlFor={"expirationDateTime"}>expiration date: </label><br></br>
+                <label htmlFor={"expirationDateTime"}><strong>expiration date:</strong> </label><br></br>
                 <input type="date" placeholder="expiration date" {...register("expirationDateTime")}/><br></br>
                 <input type="text" placeholder="price" {...register("price")}/><br></br>
                 <select {...register("categoryId")}>

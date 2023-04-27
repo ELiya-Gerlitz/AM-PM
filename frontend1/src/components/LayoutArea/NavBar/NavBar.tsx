@@ -7,6 +7,7 @@ function NavBar(): JSX.Element {
             <NavLink to={"/home"}>home</NavLink>  |   
             <NavLink to={"/products"}>view products according to category</NavLink>  |   
             <NavLink to={"/products/add"}>  add new product</NavLink>
+            <hr></hr>
         </div>
     );
 }
