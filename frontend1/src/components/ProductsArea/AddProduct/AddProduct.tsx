@@ -34,7 +34,6 @@ function AddProduct(): JSX.Element {
     }
     return (
         <div className="AddProduct">
-			i am add product
             <form onSubmit={handleSubmit(send)}>
                 <input type="text" placeholder="product name" {...register("name")}/><br></br>
                 <label htmlFor={"dateTime"}>date and time of producing: </label><br></br>

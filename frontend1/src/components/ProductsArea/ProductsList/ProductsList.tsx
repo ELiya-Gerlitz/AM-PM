@@ -3,6 +3,7 @@ import "./ProductsList.css";
 import ProductService from "../../../Service/ProductService";
 import CategoryModel from "../../../Models/CategoryModel";
 import ProductModel from "../../../Models/ProductModel";
+import ProductCard from "../ProductCard/ProductCard";
 
 function ProductsList(): JSX.Element {
     const [categories, setCategories] = useState<CategoryModel[]>()
@@ -29,7 +30,8 @@ async function handleChange(e : any){
 
     return (
         <div className="ProductsList">
-			i am product List
+            <br></br>
+            <h3>Select Category to get all the products under that category</h3>
             <select onChange={handleChange}>
             {categories && 
             <>
@@ -40,7 +42,8 @@ async function handleChange(e : any){
             }
               </select>
             
-            {prod&& prod.map(p=><p key={p.productId}>{p.name}</p>)}
+            {/* {prod&& prod.map(p=><p key={p.productId}>{p.name}</p>)} */}
+            {prod&& prod.map(p=><ProductCard product={p}/>)}
         </div>
     );
 }
