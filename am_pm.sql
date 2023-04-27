@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2023 at 10:35 PM
+-- Generation Time: Apr 27, 2023 at 11:17 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `am:pm`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `categoryId` int(11) NOT NULL,
+  `categoryName` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryId`, `categoryName`) VALUES
+(1, 'pastry'),
+(2, 'snacks'),
+(3, 'milkProducts'),
+(4, 'vegetables'),
+(5, 'sweets'),
+(6, 'beverages');
 
 -- --------------------------------------------------------
 
@@ -49,11 +72,18 @@ INSERT INTO `products` (`productId`, `name`, `dateTime`, `expirationDateTime`, `
 (8, 'butter bier', '2023-04-27 19:25:04', '0000-00-00 00:00:00', '18', 6),
 (9, 'soda', '2023-04-21 00:00:00', '2023-04-15 00:00:00', '8', 6),
 (10, 'Bissli', '2023-04-15 00:00:00', '2023-04-08 00:00:00', '8', 2),
-(11, 'Bamba', '2023-04-14 00:00:00', '2023-04-14 00:00:00', '17', 2);
+(11, 'Bamba', '2023-04-14 00:00:00', '2023-04-14 00:00:00', '17', 2),
+(12, 'Twizzles', '2023-04-30 00:00:00', '2023-04-30 00:00:00', '15', 5);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryId`);
 
 --
 -- Indexes for table `products`
@@ -67,10 +97,16 @@ ALTER TABLE `products`
 --
 
 --
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `categoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
