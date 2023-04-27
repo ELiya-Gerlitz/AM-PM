@@ -1,0 +1,11 @@
+.Header {
+    padding-top: 40px;
+	color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("https://d226b0iufwcjmj.cloudfront.net/retailers/2/logo.png?0.703748800923381");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    height: 55px;
+}

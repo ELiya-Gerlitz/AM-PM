@@ -1,10 +1,7 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://img.freepik.com/free-photo/blue-gradient-abstract-background-empty-room-with-space-your-text-picture_1258-66819.jpg?size=626&ext=jpg&ga=GA1.2.1103567159.1597658053&semt=robertav1_2_sidr");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 code {
