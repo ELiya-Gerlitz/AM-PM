@@ -11,6 +11,7 @@ function Routing(): JSX.Element {
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/products" element={<ProductsList/>}/>
                 <Route path="/products/add" element={<AddProduct/>}/>
+                <Route path="/" element={<Home/>}/>
             </Routes>
         </div>
     );

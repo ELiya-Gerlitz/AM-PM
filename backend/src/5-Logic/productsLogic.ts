@@ -15,9 +15,9 @@ async function getAllCatergories():Promise<CatrgoryModel[]>{
 async function getProductsByCategoryId(categoryId :number):Promise<ProductModel[]>{
     const sql = `
     SELECT * FROM products
-    WHERE categoryId = ${categoryId}
+    WHERE categoryId = ?
     `
-    const allCategories = await dal.execute(sql)
+    const allCategories = await dal.execute(sql, [categoryId])
     return allCategories
 }
 
@@ -26,24 +26,24 @@ async function postOneProduct(product :ProductModel):Promise<ProductModel>{
     INSERT INTO products
     VALUES (
         NULL,
-        "${product.name}",
-        "${product.dateTime}",
-        "${product.expirationDateTime}",
-        ${product.price},
-        ${product.categoryId}
+        ?,
+        ?,
+        ?,
+        ?,
+        ?
     )
     `
-    const info : OkPacket = await dal.execute(sql)
+    const info : OkPacket = await dal.execute(sql, [product.name, product.dateTime, product.expirationDateTime, product.price, product.categoryId ])
     product.productId = info.insertId
     return product
 }
 async function deleteOneProduct(productId :number):Promise<void>{
     const sql = `
    DELETE FROM products 
-   WHERE productId = ${productId}
+   WHERE productId = ?
     
     `
-    const info : OkPacket = await dal.execute(sql)
+    const info : OkPacket = await dal.execute(sql, [productId])
     //if(info.affectedRows === 0) throw new ErrorModel...
 }
 
