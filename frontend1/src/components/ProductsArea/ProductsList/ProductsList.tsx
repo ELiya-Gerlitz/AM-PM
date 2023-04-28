@@ -43,7 +43,7 @@ async function handleChange(e : any){
               </select>
             
             {/* {prod&& prod.map(p=><p key={p.productId}>{p.name}</p>)} */}
-            {prod&& prod.map(p=><ProductCard product={p}/>)}
+            {prod&& prod.map(p=><ProductCard key={p.productId} product={p}/>)}
         </div>
     );
 }
